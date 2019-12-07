@@ -42,7 +42,6 @@ gem 'redis'
 gem 'sidekiq'
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'
-gem 'actionview', '>= 5.0.7.2'
 
 group :test do
   gem "factory_bot_rails"

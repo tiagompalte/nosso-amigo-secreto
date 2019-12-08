@@ -34,3 +34,17 @@ $(document).on 'turbolinks:load', ->
       error: (jqXHR, textStatus, errorThrown) ->
         Materialize.toast(jqXHR.responseText, 4000, 'red')
     return false
+
+  # Modal
+  $('.modal').modal() # Inicialização
+
+  $('#remove_campaign').on 'click', (e) ->
+    e.preventDefault()
+    $('#modal_yes_no').modal('open')
+
+  $('.modal-close').on 'click', (e) ->
+    e.preventDefault()
+    $('#new_campaign').modal('close')
+
+  $('.modal-action').on 'click', (f) ->
+    $('#remove_campaign').submit()
